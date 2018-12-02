@@ -29,13 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.Label coursNOLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.Windows.Forms.Label coursNOLabel;
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -44,7 +43,6 @@
             this.Name = new System.Windows.Forms.TextBox();
             this.Number = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.Hybrid = new System.Windows.Forms.RadioButton();
             this.Number1 = new System.Windows.Forms.TextBox();
             this.Name1 = new System.Windows.Forms.TextBox();
@@ -72,22 +70,13 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.numberBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.coursNOTextBox = new System.Windows.Forms.TextBox();
+            this.coursNOComboBox = new System.Windows.Forms.ComboBox();
             coursNOLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.capstoneDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numberBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numberBindingNavigator)).BeginInit();
             this.numberBindingNavigator.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // coursNOLabel
-            // 
-            coursNOLabel.AutoSize = true;
-            coursNOLabel.Location = new System.Drawing.Point(491, 291);
-            coursNOLabel.Name = "coursNOLabel";
-            coursNOLabel.Size = new System.Drawing.Size(56, 13);
-            coursNOLabel.TabIndex = 26;
-            coursNOLabel.Text = "Cours NO:";
             // 
             // label1
             // 
@@ -129,16 +118,6 @@
             this.label4.Size = new System.Drawing.Size(31, 13);
             this.label4.TabIndex = 3;
             this.label4.Text = "Type";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(27, 159);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(80, 13);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Course Number";
             // 
             // label6
             // 
@@ -213,15 +192,6 @@
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(151, 20);
             this.dateTimePicker1.TabIndex = 12;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(160, 154);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(92, 21);
-            this.comboBox1.TabIndex = 13;
             // 
             // Hybrid
             // 
@@ -367,7 +337,7 @@
             this.numberBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.numberBindingNavigator.Name = "numberBindingNavigator";
             this.numberBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.numberBindingNavigator.Size = new System.Drawing.Size(673, 25);
+            this.numberBindingNavigator.Size = new System.Drawing.Size(715, 25);
             this.numberBindingNavigator.TabIndex = 26;
             this.numberBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -466,21 +436,31 @@
             this.numberBindingNavigatorSaveItem.Text = "Save Data";
             this.numberBindingNavigatorSaveItem.Click += new System.EventHandler(this.numberBindingNavigatorSaveItem_Click);
             // 
-            // coursNOTextBox
+            // coursNOLabel
             // 
-            this.coursNOTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.numberBindingSource, "CoursNO", true));
-            this.coursNOTextBox.Location = new System.Drawing.Point(553, 288);
-            this.coursNOTextBox.Name = "coursNOTextBox";
-            this.coursNOTextBox.Size = new System.Drawing.Size(100, 20);
-            this.coursNOTextBox.TabIndex = 27;
+            coursNOLabel.AutoSize = true;
+            coursNOLabel.Location = new System.Drawing.Point(26, 157);
+            coursNOLabel.Name = "coursNOLabel";
+            coursNOLabel.Size = new System.Drawing.Size(56, 13);
+            coursNOLabel.TabIndex = 26;
+            coursNOLabel.Text = "Cours NO:";
+            // 
+            // coursNOComboBox
+            // 
+            this.coursNOComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.numberBindingSource, "CoursNO", true));
+            this.coursNOComboBox.FormattingEnabled = true;
+            this.coursNOComboBox.Location = new System.Drawing.Point(100, 153);
+            this.coursNOComboBox.Name = "coursNOComboBox";
+            this.coursNOComboBox.Size = new System.Drawing.Size(121, 21);
+            this.coursNOComboBox.TabIndex = 27;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(673, 366);
+            this.ClientSize = new System.Drawing.Size(715, 366);
             this.Controls.Add(coursNOLabel);
-            this.Controls.Add(this.coursNOTextBox);
+            this.Controls.Add(this.coursNOComboBox);
             this.Controls.Add(this.numberBindingNavigator);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.online);
@@ -492,7 +472,6 @@
             this.Controls.Add(this.Name1);
             this.Controls.Add(this.Number1);
             this.Controls.Add(this.Hybrid);
-            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.Number);
             this.Controls.Add(this.Name);
@@ -501,13 +480,12 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(2);
-            //this.Name = "Form1";
+            this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.capstoneDataSet)).EndInit();
@@ -526,7 +504,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
@@ -535,7 +512,6 @@
         private System.Windows.Forms.TextBox Name;
         private System.Windows.Forms.TextBox Number;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.RadioButton Hybrid;
         private System.Windows.Forms.TextBox Number1;
         private System.Windows.Forms.TextBox Name1;
@@ -563,7 +539,7 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton numberBindingNavigatorSaveItem;
-        private System.Windows.Forms.TextBox coursNOTextBox;
+        private System.Windows.Forms.ComboBox coursNOComboBox;
     }
 }
 
